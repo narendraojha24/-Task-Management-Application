@@ -194,10 +194,4 @@ You can use the following **test users** and **sample tasks** after registration
 
 ---
 
-## 📚 License
-
-This project is licensed for educational purposes.
-
----
-
 # 🎉 Thank You!
