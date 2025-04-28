@@ -1,12 +1,9 @@
-import axios from "axios";
+// src/services/api.js
+import axios from 'axios';
 
 const api = axios.create({
-  baseURL: "http://localhost:5000/api", // change if different
+  baseURL: 'http://localhost:5000/api',
+  withCredentials: true,  // important to allow cookies (JWT tokens)
 });
-
-const user = JSON.parse(localStorage.getItem("user"));
-if (user) {
-  api.defaults.headers.common["Authorization"] = `Bearer ${user.token}`;
-}
 
 export default api;
