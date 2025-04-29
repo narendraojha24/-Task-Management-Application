@@ -1,89 +1,197 @@
-# Task Management Application 📝
+# 📋 Task Management Application
 
-A full-stack web application that allows users to register, log in, and manage their personal tasks — with features like adding, updating, deleting, and filtering tasks.
+A full-stack MERN application for managing personal tasks with authentication, filtering, and CRUD operations.
 
 ---
 
-## 📦 Tech Stack
+## 🚀 Tech Stack
 
-| Layer | Technology |
-|:--|:--|
-| Frontend | React.js (with Hooks, Context API, Axios) |
-| Backend | Node.js, Express.js |
-| Database | MongoDB (with Mongoose) |
-| Authentication | JWT (JSON Web Tokens) |
-| Styling | CSS Modules |
+| Frontend      | Backend        | Database |
+| :------------ | :------------- | :------- |
+| React.js (Vite) | Node.js, Express.js | MongoDB (Mongoose ORM) |
+| Axios, React Router | JWT Authentication | |
 
 ---
 
 ## 🛠 Setup Instructions
 
-### ⚙️ Prerequisites
-- Node.js (v14+ recommended)
-- MongoDB (Atlas cloud database or local installation)
+### Backend Setup
+
+1. **Navigate to Backend folder**
+
+```bash
+cd Backend
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Create a `.env` file**
+
+```env
+PORT=5000
+MONGO_URI=your_mongodb_connection_url
+JWT_SECRET=your_jwt_secret
+```
+
+4. **Run Backend Server**
+
+```bash
+npm run dev
+```
+
+Backend will run on `http://localhost:5000/`.
 
 ---
 
-### 🚀 Frontend Setup (`client/`)
+### Frontend Setup
+
+1. **Navigate to Client folder**
+
+```bash
+cd client
+```
+
+2. **Install dependencies**
+
+```bash
+npm install
+```
+
+3. **Run Frontend**
+
+```bash
+npm run dev
+```
+
+Frontend will run on `http://localhost:5173/`.
+
+---
+
+## 🧩 Brief Explanation of Technical Choices and Architecture
+
+- **Frontend:**  
+  - React with Functional Components and Hooks (useState, useEffect, useContext, Custom Hooks).
+  - Axios for making API requests.
+  - React Router DOM for routing (Login, Register, Dashboard).
+  - CSS for styling (without external frameworks like Tailwind).
+  
+- **Backend:**  
+  - Express.js for building RESTful APIs.
+  - MongoDB with Mongoose ODM for schema modeling.
+  - JWT for authentication (stored securely in HTTP-only cookies).
+  - Middleware for authentication (`protect` function).
+  - Error Handling middlewares.
+
+- **Architecture Overview:**
+  ```
+  Frontend (React)
+      ↓ (Axios API calls)
+  Backend (Node + Express)
+      ↓
+  MongoDB Database
+  ```
+
+---
+
+## 🗄️ Database Schema Description
+
+### User Schema (`users` collection)
+
+| Field     | Type    | Description          |
+| :-------- | :------ | :------------------- |
+| `_id`     | ObjectId | MongoDB Unique ID     |
+| `name`    | String  | User's name            |
+| `email`   | String  | Unique email address   |
+| `password`| String  | Hashed password        |
+
+---
+
+### Task Schema (`tasks` collection)
+
+| Field        | Type     | Description               |
+| :----------- | :------- | :------------------------ |
+| `_id`        | ObjectId | MongoDB Unique ID          |
+| `userId`     | ObjectId | Associated User ID (Reference) |
+| `title`      | String   | Task title                 |
+| `description`| String   | Task description           |
+| `status`     | String   | 'completed' / 'incomplete' |
+| `priority`   | String   | 'Low' / 'Medium' / 'High'  |
+| `createdAt`  | Date     | Auto-generated creation date |
+
+---
+
+## 🖥️ How to Run the Application Locally
+
+1. **Start Backend first**
+
+```bash
+cd Backend
+npm install
+npm run dev
+```
+
+2. **Start Frontend**
 
 ```bash
 cd client
 npm install
 npm run dev
+```
 
+3. **Visit the App**
 
-🚀 Backend Setup (server/)
+Open your browser and go to:
 
-cd server
-npm install
-npx nodemon server.js
+```
+http://localhost:5173/
+```
 
+✅ Now you can register, login, create tasks, update them, delete them, and filter by status!
 
-🔧 How to Run Locally (Step-by-Step) :
+---
 
-Clone the repository.
-Set up backend first: install dependencies, configure .env, and start server.
-Then set up frontend: install dependencies and run dev server.
-Make sure backend (port 5000) is running before frontend.
-Visit http://localhost:5173/ to use the app.
+## 🌱 Seed Data for Testing
 
-📊 Database Schema
-➡️ User Model
+You can use the following **test users** and **sample tasks** after registration:
 
-Field	Type	Description
-email	String	User email (unique)
-password	String	Hashed password
-➡️ Task Model
+### Test Users
 
-Field	Type	Description
-title	String	Title of the task
-description	String	Details about the task
-status	String	"incomplete" (default) or "complete"
-priority	String	"Low", "Medium", "High"
-createdAt	Date	Timestamp when the task was created
-userId	ObjectId	Reference to the User who created the task
+| Name         | Email               | Password  |
+| :----------- | :------------------- | :-------- |
+| Alice Johnson | alice@example.com    | 123456    |
+| Bob Smith     | bob@example.com      | 123456    |
+| Charlie Brown | charlie@example.com  | 123456    |
 
-🏗️ Technical Choices & Architecture :
+---
 
-React with Hooks and Context API: Simplifies state management, especially for authentication.
-Axios: Easy HTTP requests from frontend to backend.
-Node.js + Express.js: Lightweight backend, perfect for building RESTful APIs.
-MongoDB with Mongoose: Flexible NoSQL database to store user and task data.
-JWT Authentication: Secure, stateless authentication using tokens.
-CSS Modules: Local scoped CSS to prevent style conflicts.
-Folder Structure: Clean separation of concerns — Components, Pages, Context, Services, etc.
+### Sample Tasks
 
-✨ Features Implemented:
+| Title               | Description              | Priority | Status     |
+| :------------------ | :------------------------ | :------- | :--------- |
+| Complete Assignment | Finish the React project   | High     | Incomplete |
+| Buy Groceries       | Milk, Bread, Eggs          | Medium   | Completed  |
+| Morning Exercise    | Yoga and Meditation        | Low      | Incomplete |
 
-User registration & login with JWT
-Protected routes (Tasks only accessible after login)
-Create, Read, Update (mark complete), and Delete Tasks (CRUD)
-Filter tasks by status (All, Active, Completed)
-Basic error handling (invalid login, etc.)
-Responsive and user-friendly UI
+---
 
+## 📌 API Routes Summary
 
+| Method | Route                   | Description         |
+| :----- | :---------------------- | :------------------ |
+| POST   | `/api/users/register`    | Register a user     |
+| POST   | `/api/users/login`       | Login a user        |
+| POST   | `/api/users/logout`      | Logout user         |
+| GET    | `/api/users/profile`     | Get user profile    |
+| POST   | `/api/tasks`             | Create task         |
+| GET    | `/api/tasks`             | Get all tasks       |
+| PUT    | `/api/tasks/:id`         | Update task         |
+| DELETE | `/api/tasks/:id`         | Delete task         |
+| GET    | `/api/tasks/filter`      | Filter tasks by status |
 
+---
 
-
-
+# 🎉 Thank You!
