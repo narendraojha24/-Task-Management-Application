@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <Link to="/" style={{ color: "white", textDecoration: "none" }}>Task Manager</Link>
-      {user && <button onClick={logout}>Logout</button>}
+      {user && <button onClick={logout}>Logout now</button>}
     </div>
   );
 };
