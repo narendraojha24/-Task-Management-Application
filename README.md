@@ -193,5 +193,3 @@ You can use the following **test users** and **sample tasks** after registration
 | GET    | `/api/tasks/filter`      | Filter tasks by status |
 
 ---
-
-# 🎉 Thank You!
