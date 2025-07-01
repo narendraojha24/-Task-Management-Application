@@ -1,4 +1,4 @@
-# 📋 Task Management Application
+8# 📋 Task Management Application
 
 A full-stack MERN application for managing personal tasks with authentication, filtering, and CRUD operations.
 
@@ -178,18 +178,3 @@ You can use the following **test users** and **sample tasks** after registration
 
 ---
 
-## 📌 API Routes Summary
-
-| Method | Route                   | Description         |
-| :----- | :---------------------- | :------------------ |
-| POST   | `/api/users/register`    | Register a user     |
-| POST   | `/api/users/login`       | Login a user        |
-| POST   | `/api/users/logout`      | Logout user         |
-| GET    | `/api/users/profile`     | Get user profile    |
-| POST   | `/api/tasks`             | Create task         |
-| GET    | `/api/tasks`             | Get all tasks       |
-| PUT    | `/api/tasks/:id`         | Update task         |
-| DELETE | `/api/tasks/:id`         | Delete task         |
-| GET    | `/api/tasks/filter`      | Filter tasks by status |
-
----
