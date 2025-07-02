@@ -142,18 +142,6 @@ npm install
 npm run dev
 ```
 
-3. **Visit the App**
-
-Open your browser and go to:
-
-```
-http://localhost:5173/
-```
-
-✅ Now you can register, login, create tasks, update them, delete them, and filter by status!
-
----
-
 ## 🌱 Seed Data for Testing
 
 You can use the following **test users** and **sample tasks** after registration:
