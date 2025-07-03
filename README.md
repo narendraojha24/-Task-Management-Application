@@ -156,13 +156,5 @@ You can use the following **test users** and **sample tasks** after registration
 
 ---
 
-### Sample Tasks
 
-| Title               | Description              | Priority | Status     |
-| :------------------ | :------------------------ | :------- | :--------- |
-| Complete Assignment | Finish the React project   | High     | Incomplete |
-| Buy Groceries       | Milk, Bread, Eggs          | Medium   | Completed  |
-| Morning Exercise    | Yoga and Meditation        | Low      | Incomplete |
-
----
 
