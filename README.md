@@ -146,15 +146,7 @@ npm run dev
 
 You can use the following **test users** and **sample tasks** after registration:
 
-### Test Users
 
-| Name         | Email               | Password  |
-| :----------- | :------------------- | :-------- |
-| Alice Johnson | alice@example.com    | 123456    |
-| Bob Smith     | bob@example.com      | 123456    |
-| Charlie Brown | charlie@example.com  | 123456    |
-
----
 
 
 
