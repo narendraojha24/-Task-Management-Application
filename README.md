@@ -86,16 +86,6 @@ Frontend will run on `http://localhost:5173/`.
   - Middleware for authentication (`protect` function).
   - Error Handling middlewares.
 
-- **Architecture Overview:**
-  ```
-  Frontend (React)
-      ↓ (Axios API calls)
-  Backend (Node + Express)
-      ↓
-  MongoDB Database
-  ```
-
----
 
 ## 🗄️ Database Schema Description
 
