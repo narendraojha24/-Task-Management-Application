@@ -132,10 +132,6 @@ npm install
 npm run dev
 ```
 
-## 🌱 Seed Data for Testing
-
-You can use the following **test users** and **sample tasks** after registration:
-
 
 
 
