@@ -1,4 +1,4 @@
-8# 📋 Task Management Application
+# 📋 Task Management Application
 
 A full-stack MERN application for managing personal tasks with authentication, filtering, and CRUD operations.
 
