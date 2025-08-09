@@ -98,22 +98,7 @@ Frontend will run on `http://localhost:5173/`.
 | `email`   | String  | Unique email address   |
 | `password`| String  | Hashed password        |
 
----
-
-### Task Schema (`tasks` collection)
-
-| Field        | Type     | Description               |
-| :----------- | :------- | :------------------------ |
-| `_id`        | ObjectId | MongoDB Unique ID          |
-| `userId`     | ObjectId | Associated User ID (Reference) |
-| `title`      | String   | Task title                 |
-| `description`| String   | Task description           |
-| `status`     | String   | 'completed' / 'incomplete' |
-| `priority`   | String   | 'Low' / 'Medium' / 'High'  |
-| `createdAt`  | Date     | Auto-generated creation date |
-
----
-
+--
 ## 🖥️ How to Run the Application Locally
 
 1. **Start Backend first**
