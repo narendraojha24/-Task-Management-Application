@@ -107,7 +107,7 @@ Frontend will run on `http://localhost:5173/`.
 cd Backend
 npm install
 npm run dev
-```
+``` 
 
 2. **Start Frontend**
 
@@ -116,7 +116,7 @@ cd client
 npm install
 npm run dev
 ```
-
+.........
 
 
 
