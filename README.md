@@ -1,4 +1,4 @@
-# 📋 Task Management Application
+o# 📋 Task Management Application
 
 A full-stack MERN application for managing personal tasks with authentication, filtering, and CRUD operations.
 
@@ -116,7 +116,7 @@ cd client
 npm install
 npm run dev
 ```
-.............
+
 
 
 
